@@ -355,7 +355,7 @@ AS_HELP_STRING([--with-max-am=N],[Support Gaussians of angular momentum up to N.
         LIBINT_MAX_AM=$withval
       fi
       if test $LIBINT_MAX_AM -ge 8; then
-        AC_MSG_ERROR([Value for --with-max-am too high ($withval). Are you sure you know what you are doing?])
+        AC_MSG_WARN([Value for --with-max-am too high ($withval). Are you sure you know what you are doing?])
       fi
     ;;
   esac
@@ -401,7 +401,7 @@ AS_HELP_STRING([--with-eri-max-am=N],[Support ERIs for Gaussians of angular mome
       ERI_MAX_AM=$withval
      fi
      if test $ERI_MAX_AM -ge 8; then
-      AC_MSG_ERROR([Value for --with-eri-max-am too high ($withval). Are you sure you know what you are doing?])
+      AC_MSG_WARN([Value for --with-eri-max-am too high ($withval). Are you sure you know what you are doing?])
      fi
      AC_SUBST(ERI_MAX_AM)
      AC_DEFINE_UNQUOTED(ERI_MAX_AM,$ERI_MAX_AM)
@@ -456,7 +456,7 @@ AS_HELP_STRING([--with-1body-max-am=N],[Support 1-e ints for Gaussians of angula
       ONEBODY_MAX_AM=$withval
      fi
      if test $ONEBODY_MAX_AM -ge 8; then
-      AC_MSG_ERROR([Value for --with-1body-max-am too high ($withval). Are you sure you know what you are doing?])
+      AC_MSG_WARN([Value for --with-1body-max-am too high ($withval). Are you sure you know what you are doing?])
      fi
      AC_SUBST(ONEBODY_MAX_AM)
      AC_DEFINE_UNQUOTED(ONEBODY_MAX_AM,$ONEBODY_MAX_AM)
@@ -525,7 +525,7 @@ AS_HELP_STRING([--with-eri3-max-am=N],[Support 3-center ERIs for Gaussians of an
       ERI3_MAX_AM=$withval
      fi
      if test $ERI3_MAX_AM -ge 8; then
-      AC_MSG_ERROR([Value for --with-eri3-max-am too high ($withval). Are you sure you know what you are doing?])
+      AC_MSG_WARN([Value for --with-eri3-max-am too high ($withval). Are you sure you know what you are doing?])
      fi
      AC_SUBST(ERI3_MAX_AM)
      AC_DEFINE_UNQUOTED(ERI3_MAX_AM,$ERI3_MAX_AM)
@@ -596,7 +596,7 @@ AS_HELP_STRING([--with-eri2-max-am=N],[Support 2-center ERIs for Gaussians of an
       ERI2_MAX_AM=$withval
      fi
      if test $ERI2_MAX_AM -ge 8; then
-      AC_MSG_ERROR([Value for --with-eri2-max-am too high ($withval). Are you sure you know what you are doing?])
+      AC_MSG_WARN([Value for --with-eri2-max-am too high ($withval). Are you sure you know what you are doing?])
      fi
      AC_SUBST(ERI2_MAX_AM)
      AC_DEFINE_UNQUOTED(ERI2_MAX_AM,$ERI2_MAX_AM)
