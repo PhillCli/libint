@@ -368,6 +368,11 @@ if (LIBINT_HAS_CXX_API)
   target_compile_definitions(libint2_cxx INTERFACE
           $<BUILD_INTERFACE:SRCDATADIR="${PROJECT_SOURCE_DIR}/lib/basis">
     )
+  target_include_directories(libint2_cxx INTERFACE
+      $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include> $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/include>
+      $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/include/libint2>
+      $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/${LIBINT2_INSTALL_INCLUDEDIR}>
+      )
   if (NOT MSVC)
       # TODO fix the DATADIR define escaping on Windows
       # * below works fine in tests
